@@ -1,0 +1,18 @@
+{
+  "id": "nishanml/zyot-v3-5-train",
+  "title": "zyot-v3-5-train",
+  "code_file": "train.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "nishanml/zyot-decider-v3-adapter",
+    "nishanml/zyot-v3-5-train-final"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
