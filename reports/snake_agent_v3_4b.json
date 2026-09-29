@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-09-29T10:52:59Z",
+  "model": "Zyot Decider v3 4B (Gemma 3 4B + LoRA) — local GGUF Q4_K_M + LoRA GGUF f16",
+  "hardware": "GTX 1650 (4GB VRAM)",
+  "server_flags": "-ngl 99 -c 2048 --port 8081",
+  "prompt_style": "few-shot compact (safe-list + preferred-list + 2 worked examples)",
+  "prompt_size_chars": 470,
+  "grammar_constraint": "root ::= [UDLR]",
+  "cache_prompt": true,
+  "results": {
+    "agent_mode": "agent-model",
+    "steps_survived": 60,
+    "invalid_moves": 0,
+    "final_length": 3,
+    "food_eaten": 0,
+    "score": 0
+  },
+  "latency": {
+    "cold_start_ms": 14349,
+    "steady_avg_ms": 2203,
+    "steady_min_ms": 2054,
+    "steady_max_ms": 2319
+  },
+  "verdict": {
+    "safety": "100% legal moves (0 invalid / 60 steps) — model respects walls, own body, no-reverse rule",
+    "speed": "2.2s/move steady state (3.2x faster than v2 12B's 7.1s on same GPU)",
+    "goal_seeking": "POOR — did not eat any food in 60 steps despite prompt listing preferred directions. Model was trained on typed decisions (T/F, categorical), NOT on spatial planning/pursuit. Consistent with training distribution.",
+    "story": "Zyot v3 is a fast, safe DECISION classifier. Playing snake is a spatial-planning task the model wasn't trained for — it defaults to safe wandering rather than pathfinding. To turn it into a competent snake agent you'd either: (a) wrap the model with a BFS pathfinder that hands the model only tactical decisions, or (b) fine-tune on spatial trajectories."
+  },
+  "comparison": {
+    "vs_v2_12b_same_setup": {
+      "v2_12b_avg_ms": 7145,
+      "v3_4b_steady_ms": 2203,
+      "speedup": "3.24x"
+    }
+  }
+}

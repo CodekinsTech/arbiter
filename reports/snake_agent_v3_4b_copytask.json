@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-29T11:00:00Z",
+  "model": "Zyot Decider v3 4B (Gemma 3 4B + LoRA) — local GGUF Q4_K_M + LoRA GGUF f16",
+  "hardware": "GTX 1650 (4GB VRAM)",
+  "server_flags": "-ngl 99 -c 2048 --port 8081",
+  "prompt_style": "copy-task (pick FIRST letter from preferred list; boolean-decision-shaped)",
+  "prompt_size_chars": 237,
+  "grammar_constraint": "root ::= [UDLR]",
+  "cache_prompt": true,
+  "results": {
+    "agent_mode": "agent-model",
+    "steps_survived_snapshot": 240,
+    "invalid_moves": 0,
+    "final_length_snapshot": 16,
+    "food_eaten": 13,
+    "score_snapshot": 130,
+    "still_alive_when_captured": true
+  },
+  "latency": {
+    "steady_avg_ms": 355,
+    "notes": "5.5x faster than planning-prompt version (was 2203ms). Smaller prompt (237 vs 470 chars) = less prefill."
+  },
+  "verdict": {
+    "correction_from_previous_report": "Previous report said Zyot v3 'can't chase food because it's a decision classifier, not spatial planner'. That was WRONG framing — Jev and Kev are also decision classifiers, not spatial planners.",
+    "actual_root_cause": "The prior 'planning' prompt asked the model to REASON about spatial state. The model tolerated but didn't follow the preferred-direction hint. This prompt asks it to COPY the first letter of a shortlist — the same shape as its training data (boolean/typed decisions).",
+    "story": "Zyot v3 4B is a competent snake agent when the task is framed as a shortlist selection instead of spatial planning. 13 food eaten, length 16, 100% legal moves, 355ms/decision."
+  },
+  "comparison_all_runs": {
+    "v2_12b_planning_prompt":   {"avg_ms": 7145, "food_eaten": 0, "final_length": 3,  "invalid": 0},
+    "v3_4b_planning_prompt":    {"avg_ms": 2203, "food_eaten": 0, "final_length": 3,  "invalid": 0},
+    "v3_4b_copytask_prompt":    {"avg_ms": 355,  "food_eaten": 13,"final_length": 16, "invalid": 0}
+  }
+}

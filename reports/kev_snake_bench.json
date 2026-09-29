@@ -1,0 +1,157 @@
+{
+  "model": "jaredpalmer/kev-4b",
+  "benchmark": "iammusham/jev-snake (snake-jev-v2)",
+  "hardware": "Kaggle T4",
+  "per_game": [
+    {
+      "tier": "easy",
+      "seed": 1,
+      "score": 1,
+      "ticks": 18,
+      "terminal_reason": "wall",
+      "snake_length": 4,
+      "avg_ms": 1036.2,
+      "fallbacks": 0
+    },
+    {
+      "tier": "easy",
+      "seed": 2,
+      "score": 0,
+      "ticks": 19,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1018.4,
+      "fallbacks": 0
+    },
+    {
+      "tier": "easy",
+      "seed": 3,
+      "score": 0,
+      "ticks": 10,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1052.2,
+      "fallbacks": 0
+    },
+    {
+      "tier": "easy",
+      "seed": 4,
+      "score": 0,
+      "ticks": 10,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1070.6,
+      "fallbacks": 0
+    },
+    {
+      "tier": "easy",
+      "seed": 5,
+      "score": 0,
+      "ticks": 10,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1095.3,
+      "fallbacks": 0
+    },
+    {
+      "tier": "medium",
+      "seed": 1,
+      "score": 1,
+      "ticks": 19,
+      "terminal_reason": "wall",
+      "snake_length": 4,
+      "avg_ms": 1473.6,
+      "fallbacks": 0
+    },
+    {
+      "tier": "medium",
+      "seed": 2,
+      "score": 0,
+      "ticks": 10,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1383.7,
+      "fallbacks": 0
+    },
+    {
+      "tier": "medium",
+      "seed": 3,
+      "score": 0,
+      "ticks": 11,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1338.1,
+      "fallbacks": 0
+    },
+    {
+      "tier": "medium",
+      "seed": 4,
+      "score": 0,
+      "ticks": 4,
+      "terminal_reason": "decoy_food",
+      "snake_length": 3,
+      "avg_ms": 1326.9,
+      "fallbacks": 0
+    },
+    {
+      "tier": "medium",
+      "seed": 5,
+      "score": 1,
+      "ticks": 18,
+      "terminal_reason": "wall",
+      "snake_length": 4,
+      "avg_ms": 1332.4,
+      "fallbacks": 0
+    },
+    {
+      "tier": "hard",
+      "seed": 1,
+      "score": 1,
+      "ticks": 16,
+      "terminal_reason": "decoy_food",
+      "snake_length": 4,
+      "avg_ms": 1939.0,
+      "fallbacks": 0
+    },
+    {
+      "tier": "hard",
+      "seed": 2,
+      "score": 2,
+      "ticks": 18,
+      "terminal_reason": "decoy_food",
+      "snake_length": 5,
+      "avg_ms": 1786.7,
+      "fallbacks": 0
+    },
+    {
+      "tier": "hard",
+      "seed": 3,
+      "score": 2,
+      "ticks": 18,
+      "terminal_reason": "wall",
+      "snake_length": 5,
+      "avg_ms": 1799.3,
+      "fallbacks": 0
+    },
+    {
+      "tier": "hard",
+      "seed": 4,
+      "score": 0,
+      "ticks": 16,
+      "terminal_reason": "wall",
+      "snake_length": 3,
+      "avg_ms": 1800.9,
+      "fallbacks": 0
+    },
+    {
+      "tier": "hard",
+      "seed": 5,
+      "score": 0,
+      "ticks": 7,
+      "terminal_reason": "obstacle",
+      "snake_length": 3,
+      "avg_ms": 1794.2,
+      "fallbacks": 0
+    }
+  ]
+}
