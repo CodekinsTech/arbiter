@@ -1,4 +1,4 @@
-# Zyot Decider v3.5 — 4B
+# Arbiter v3.5 — 4B
 
 First open **Gemma-3-based** decision model with a **real System One pointer head**. Trained on 62 k rows across all three Jev decision primitives — `noul` (T/F), `choice` (2–16 options), `score` (0–5) — in a single forward pass.
 
@@ -45,7 +45,7 @@ For each question type, softmax over only the valid slots.
 | Gemma 4 12B (base) | 12B | 0.880 | published |
 | Qwen 3.5 9B (base) | 9B | 0.861 | published |
 | Qwen 3.5 4B (base) | 4B | 0.856 | published |
-| **Zyot Decider v3.5 4B** | 4B | **0.836** | real System One head — not verbalizer |
+| **Arbiter v3.5 4B** | 4B | **0.836** | real System One head — not verbalizer |
 | Kev-4B | 4B | 0.595 | +24 pp over Kev |
 
 ## Usage
