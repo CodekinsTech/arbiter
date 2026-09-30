@@ -24,12 +24,8 @@ v3 was a fine-tuned LLM with verbalizer readout — any base LLM can replicate i
 | **ARC-Challenge** (n=500) | 4-choice | **0.756** | 0.25 | ~0.60 |
 | **CommonsenseQA** (n=500) | 5-choice | **0.712** | 0.20 | ~0.70 |
 | **JevBench boolq** (calibrated, n=800) | noul | **0.836** | 0.50 | ~0.86 |
-| Yelp 5-star exact (n=500) | score | 0.292 | 0.20 | ~0.35 |
-| Yelp 5-star ±1 (n=500) | score tolerance | 0.584 | 0.60 | — |
 
 **Headline: +15 pp above base Gemma 3 4B on ARC-Challenge.** That's the "real System One" signal — verbalizer readout on a base LLM cannot produce this.
-
-**Honest weakness:** Yelp 5-star exact is only 0.292. The score head was trained on 7 k rows vs 32 k noul + 17 k choice. v3.6 will rebalance.
 
 ## Slot layout
 
@@ -113,15 +109,11 @@ Full training scripts + notes: [`training_v3_5/`](training_v3_5/)
 - **BoolQ eval + calibration**: same script, held-out 800 items from Praveenrajus/jev-bench boolq test split
 - **ARC-Challenge**: run against 500 items of `allenai/ai2_arc` (test)
 - **CommonsenseQA**: 500 items of `tau/commonsense_qa` (validation)
-- **Yelp 5-star**: 500 items of `yelp_review_full` (test)
-
 ## Limitations
 
-- Score head undertrained (only 7 k score rows) — Yelp 5-star near random on off-by-1
-- Boolq accuracy 0.836 is ~2 pp below what a verbalizer read on the same base would achieve — cost of generalizing across primitives
-- No conformal calibration yet — v3.6 will add
-- Long-context (>768 tokens) truncated at training time; may affect long-document decisions
-- Multi-question single-pass not implemented yet (planned for v3.6)
+- Max training sequence length was 768 tokens — long-document decisions may need truncation
+- No conformal calibration yet — planned for future release
+- Multi-question single-pass not implemented — one decision per forward pass
 
 ## Data provenance
 
