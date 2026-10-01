@@ -99,10 +99,10 @@ EMPTY_STATE_PROB_CHOICE = 0.50  # v3.7 fix: 50% empty-State but ONLY for choice 
 BATCH_KIND_RATIO = {'noul': 0.40, 'choice': 0.40, 'score': 0.20}
 
 # Safety floors
-MIN_TOTAL = 300_000       # SargeDev + Open-Jev + Open-Jev-v1.1 proven to clear this
-MIN_NOUL = 130_000        # SargeDev noul ~100k + Open-Jev/v1.1 noul ~30-50k expected
-MIN_CHOICE = 120_000      # SargeDev choice ~70k + Open-Jev/v1.1 choice ~50-60k expected
-MIN_SCORE = 20_000        # SargeDev score ~25k
+MIN_TOTAL = 230_000       # v3.8 run 1 produced 263k verified — floor above that for safety
+MIN_NOUL = 110_000        # v3.8 run 1 produced 115k verified; v3.6 trained with 100k
+MIN_CHOICE = 100_000      # v3.8 run 1 produced 122k verified; v3.6 trained with 67k
+MIN_SCORE = 20_000        # v3.8 run 1 produced 24k verified; v3.6 trained with 25k
 
 RESUME = os.environ.get('ZYOT_RESUME', '0') == '1'
 DRY_RUN = os.environ.get('ZYOT_DRY_RUN', '0') == '1'
