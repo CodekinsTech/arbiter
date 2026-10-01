@@ -88,7 +88,7 @@ EMPTY_STATE_PROB = 0.30       # fraction of rows trained with empty State:
 
 # Safety floors — abort before GPU load if curation is bad.
 MIN_TOTAL = 500_000
-MIN_NOUL = 150_000
+MIN_NOUL = 100_000       # v3.6 trained with 100k noul and reached BoolQ 0.849 — floor at that
 MIN_CHOICE = 150_000
 MIN_SCORE = 20_000
 
