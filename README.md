@@ -8,8 +8,8 @@ single forward pass.
 Part of the **Zyot Lab** open decision-model lineup by Codekins Pvt Ltd.
 
 - **Weights:** [hiteshluke/arbiter-4b](https://huggingface.co/hiteshluke/arbiter-4b)
-- **12B flagship:** [hiteshluke/zyot-decider-12b-adapter](https://huggingface.co/hiteshluke/zyot-decider-12b-adapter)
-- **v3 verbalizer (reference):** [hiteshluke/zyot-decider-v3-verbalizer-4b](https://huggingface.co/hiteshluke/zyot-decider-v3-verbalizer-4b)
+- **Run it locally (Ollaya):** [ollaya.dev/library/arbiter](https://ollaya.dev/library/arbiter)
+- **Next generation, Arbiter v4 (12B):** [hiteshluke/arbiter-v4-12b](https://huggingface.co/hiteshluke/arbiter-v4-12b)
 - **License:** Apache-2.0 (adapter + head); base is Gemma-licensed
 
 ## Headline numbers
