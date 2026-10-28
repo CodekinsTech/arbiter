@@ -1,0 +1,56 @@
+{
+  "checkpoint": {
+    "head": "step-2500",
+    "lora_step": 2500,
+    "calibration_temp": 3.4
+  },
+  "total": 2000,
+  "by_kind": {
+    "choice": 600,
+    "noul": 600,
+    "score": 800
+  },
+  "head_based": {
+    "ollaya_score": 0.6405,
+    "correct": 1281,
+    "per_type": {
+      "noul": {
+        "correct": 482,
+        "total": 600,
+        "acc": 0.8033
+      },
+      "choice": {
+        "correct": 398,
+        "total": 600,
+        "acc": 0.6633
+      },
+      "score": {
+        "correct": 401,
+        "total": 800,
+        "acc": 0.5012
+      }
+    }
+  },
+  "text_gen": {
+    "ollaya_score": 0.316,
+    "correct": 632,
+    "unparsed": 781,
+    "per_type": {
+      "noul": {
+        "correct": 305,
+        "total": 600,
+        "acc": 0.5083
+      },
+      "choice": {
+        "correct": 318,
+        "total": 600,
+        "acc": 0.53
+      },
+      "score": {
+        "correct": 9,
+        "total": 800,
+        "acc": 0.0112
+      }
+    }
+  }
+}

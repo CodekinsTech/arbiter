@@ -12,6 +12,8 @@ Part of the **Zyot Lab** open decision-model lineup by Codekins Pvt Ltd.
 - **Next generation, Arbiter v4 (12B):** [hiteshluke/arbiter-v4-12b](https://huggingface.co/hiteshluke/arbiter-v4-12b)
 - **License:** Apache-2.0 (adapter + head); base is Gemma-licensed
 
+> **Arbiter v4 (12B)** — benchmarks, scripts and notes are in [`v4-12b/`](v4-12b/). Weights: [hiteshluke/arbiter-v4-12b](https://huggingface.co/hiteshluke/arbiter-v4-12b).
+
 ## Headline numbers
 
 | Benchmark | Primitive | Accuracy |
